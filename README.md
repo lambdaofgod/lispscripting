@@ -17,3 +17,6 @@ cljs.user=>(.add t1 (clj->js 1))
 #object[e Tensor
     [1, 1]]
 ```
+
+### Gotchas
+You can't write macros in clojurescript :( See this [stackoverflow question](https://stackoverflow.com/questions/18381052/why-clojurescript-macros-cant-be-written-in-clojurescript)
