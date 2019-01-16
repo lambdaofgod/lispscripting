@@ -22,6 +22,11 @@ Tensor
     [2, 4]
 ```
 
+#### Some remarks
+
+biwascheme repl is not great. For vim users there is alternative though: you can use syntax highlighting/autocomplete and [tslime](https://github.com/sjl/tslime.vim) to copypaste selections into repl.
+
+
 ## Clojurescript
 
 Tl;dr - can't use full Clojure, difficult to use macros (see gotchas). Arcane setup. 
