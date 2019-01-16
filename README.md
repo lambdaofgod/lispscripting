@@ -40,12 +40,14 @@ clojure -A:fig:build
 
 Use tensorflow.js from clojurescript REPL 
 ```
-cljs.user=>(load-file "src/clojurescripting/core.cljs")
-cljs.user=>(def t1 (.tensor js/tf (clj->js [0 0])))
-cljs.user=>(.add t1 (clj->js 1))
+cljs.user=>(require-macros '[clojurescripting.macros :refer [tf]])
+cljs.user=>(def t1 (tf tensor [(clj->js [1 0])]))
+cljs.user=>(tf add [t1 t1])
 #object[e Tensor
-    [1, 1]]
+    [2, 0]]
 ```
 
 ### Gotchas
 You can't write macros in clojurescript :( See this [stackoverflow question](https://stackoverflow.com/questions/18381052/why-clojurescript-macros-cant-be-written-in-clojurescript)
+
+Macros have to be written in clojure (see macros.clj).
